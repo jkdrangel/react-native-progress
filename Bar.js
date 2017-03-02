@@ -109,6 +109,7 @@ export default class ProgressBar extends Component {
       style,
       unfilledColor,
       width,
+      customStyle,
       ...restProps
     } = this.props;
 
@@ -142,7 +143,7 @@ export default class ProgressBar extends Component {
 
     return (
       <View style={[containerStyle, style]} {...restProps}>
-        <Animated.View style={progressStyle} />
+        <Animated.View style={[progressStyle, customStyle]} />
         {children}
       </View>
     );
